@@ -11,8 +11,8 @@ function MainNavbar() {
         <>
             <Navbar bg="dark" data-bs-theme="light">
                 <Container className="text-light">
-                    <Navbar.Brand className="text-light" href="#home">
-                        ToDo
+                    <Navbar.Brand className="text-light" as={Link} href="/home">
+                        <Link to={'/home'} className="text-light">ToDo</Link>
                     </Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link className="text-light" as={Link} to="/home">

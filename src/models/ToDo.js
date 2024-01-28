@@ -1,11 +1,11 @@
 
 
 export default class ToDo {
-    constructor(id, title, description, status) {
+    constructor(id, title, description) {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.status = status;
+        this.status = false
         this.createdDate = new Date();
         this.completedDate = null;
     }

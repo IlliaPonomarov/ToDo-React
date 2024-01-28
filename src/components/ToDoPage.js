@@ -1,9 +1,19 @@
+import { Form } from "react-bootstrap";
 
-export default function ToDoPage({id, toDoList, setToDoList}) {
-    return(
-        <div>
-            <h1>ToDoList {id}</h1>
-            <p>This is the ToDoList page</p>
-        </div>
-    )
+export default function ToDoPage({ id, toDoList, setToDoList }) {
+    return (
+        <Form>
+            {toDoList.map((todo) => (
+                <div key={todo.id} className="mb-3">
+                    <Form.Check
+
+                        label={todo.description}
+                        name="group1"
+                        type="checkbox"
+                        id={`reverse-${todo.id}-1`}
+                    />
+                </div>
+            ))}
+        </Form>
+    );
 }
