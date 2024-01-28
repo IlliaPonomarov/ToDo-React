@@ -32,7 +32,7 @@ export default function ToDoLinkPage(){
                 toDoList.map((dayToDo) => {
                     const path = `${dayToDo.id}/todo`;
                     return(
-                        <Route path={path} element={<ToDoPage id={dayToDo.id} toDoList={dayToDo.toDoList}  />} />
+                        <Route path={path} element={<ToDoPage dayToDoId={dayToDo.id} toDoList={dayToDo.toDoList} setToDoList={setToDoList}  />} />
                     )
                 })
             }
